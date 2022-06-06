@@ -1,0 +1,33 @@
+
+#+TITLE: pkgs-profile
+
+pkgs-profile is a general purpose package that creates a consistent set of
+pinned packages based on their commitHash.
+
+straight pkg installs go through pkgs-profile as a result the set remains
+consistent and stable.
+
+* Doom Packages Profile -- For Use Outside Of Doom
+
+Doom is many things.
+
+One of those is that of a consistent and stable set of packages as a profile.
+
+Such a packages profile can now also be used outside of Doom.
+
+* Extraction Of Packages From Doom
+
+** Clone All Doom Packages
+
+- Enable all packages
+- Doom install
+- clone all packages
+
+** /bisos/core/bsip/bin/doomPkgsProfile.sh Walks Through Cloned Packages And Creates Packages list
+
+* Packages List -- Kept At /bisos/blee/profiles/doom/doom-3.0.0-alpha.el
+And also at ./profiles//doom-3.0.0-alpha.el
+
+* b:profiles:doom:3.0.0-alpha  is a list of all packages and their versions
+
+* (b:straight:profile|install profile pkgName)
