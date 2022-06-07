@@ -88,7 +88,7 @@
 ** =b:pkgsProfile:blee3:ephemera= list of packages and their versions.
 #+end_org "
   )
-(put 'b:pkgsProfile:blee3:aphemera ':profileName "blee3-ephemera")
+(put 'b:pkgsProfile:blee3:ephemera ':profileName "blee3-ephemera")
 
 (defvar b:pkgsProfile:blee3:realm-site "/bisos/blee/profiles/blee3/realm-site-pkgsProfile.el"
    " #+begin_org
@@ -216,6 +216,7 @@ The original straight--lockfile-read-all comes first.
                                           )
    " #+begin_org
 ** DocStr: Based on contents of /bisos/blee/profile/blee3 read all relevant files and convert to list.
+NOTYET, TO-BE-OPTIMIZED. this does not need to be computed everytime.
 #+end_org "
    (let* (
           ($pkgsListIntake)
@@ -223,8 +224,9 @@ The original straight--lockfile-read-all comes first.
          )
      ;;(dolist ($eachFile b:pkgsProfile:blee3:allSansDoom3)
      (dolist ($profileSymb b:pkgsProfile:blee3:all)
-       (message (format "Preparation Of :: %s" $profileSymb))
-       (b:pkgsProfile:file:read|prepare $profileSymb)
+       (when (not (member ':pkgsList (symbol-plist $profileSymb)))
+         (message (format "Preparation Of :: %s" $profileSymb))
+         (b:pkgsProfile:file:read|prepare $profileSymb))
        (setq $result (append $result (get $profileSymb ':pkgsList)))
        )
      $result))
