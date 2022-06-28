@@ -47,23 +47,14 @@
 " orgCmntEnd)
 ;;;#+END:
 
-(defvar b:pkgsProfile:blee3:base (expand-file-name "profiles" (file-name-directory load-file-name))
-  " #+begin_org
-** =b:pkgsProfile:blee3:base= is base directory of profiles files.
-#+end_org "
-  )
-
-(defun $:b:profile|atBase (<file)
-  (expand-file-name <file b:pkgsProfile:blee3:base))
-  
-(defvar b:pkgsProfile:blee3:orphan ($:b:profile|atBase "orphan-pkgsProfile.el")
+(defvar b:pkgsProfile:blee3:orphan "/bisos/blee/profiles/blee3/orphan-pkgsProfile.el"
    " #+begin_org
 ** =b:pkgsProfile:blee3:orphan= list of packages and their versions.
 #+end_org "
   )
 (put 'b:pkgsProfile:blee3:orphan ':profileName "blee3-orphan")
 
-(defvar b:pkgsProfile:blee3:doom3 ($:b:profile|atBase "doom3-pkgsProfile.el")
+(defvar b:pkgsProfile:blee3:doom3 "/bisos/blee/profiles/blee3/doom3-pkgsProfile.el"
    " #+begin_org
 ** =b:pkgsProfile:blee3:doom3= list of packages and their versions.
 #+end_org "
@@ -71,42 +62,42 @@
 (put 'b:pkgsProfile:blee3:doom3 ':profileName "blee3-doom3")
 
 
-(defvar b:pkgsProfile:blee3:native ($:b:profile|atBase "native-pkgsProfile.el")
+(defvar b:pkgsProfile:blee3:native "/bisos/blee/profiles/blee3/native-pkgsProfile.el"
    " #+begin_org
 ** =b:pkgsProfile:blee3:native= list of packages and their versions as property-list.
 #+end_org "
   )
 (put 'b:pkgsProfile:blee3:native ':profileName "blee3-native")
 
-(defvar b:pkgsProfile:blee3:adopted ($:b:profile|atBase "adopted-pkgsProfile.el")
+(defvar b:pkgsProfile:blee3:adopted "/bisos/blee/profiles/blee3/adopted-pkgsProfile.el"
    " #+begin_org
 ** =b:pkgsProfile:blee3:adopted= list of packages and their versions.
 #+end_org "
   )
 (put 'b:pkgsProfile:blee3:adopted ':profileName "blee3-adopted")
 
-(defvar b:pkgsProfile:blee3:explicit ($:b:profile|atBase "explicit-pkgsProfile.el")
+(defvar b:pkgsProfile:blee3:explicit "/bisos/blee/profiles/blee3/explicit-pkgsProfile.el"
    " #+begin_org
 ** =b:pkgsProfile:blee3:explicit= list of packages and their versions.
 #+end_org "
   )
 (put 'b:pkgsProfile:blee3:explicit ':profileName "blee3-explicit")
 
-(defvar b:pkgsProfile:blee3:ephemera ($:b:profile|atBase "ephemera-pkgsProfile.el")
+(defvar b:pkgsProfile:blee3:ephemera "/bisos/blee/profiles/blee3/ephemera-pkgsProfile.el"
    " #+begin_org
 ** =b:pkgsProfile:blee3:ephemera= list of packages and their versions.
 #+end_org "
   )
 (put 'b:pkgsProfile:blee3:ephemera ':profileName "blee3-ephemera")
 
-(defvar b:pkgsProfile:blee3:realm-site ($:b:profile|atBase "realm-site-pkgsProfile.el")
+(defvar b:pkgsProfile:blee3:realm-site "/bisos/blee/profiles/blee3/realm-site-pkgsProfile.el"
    " #+begin_org
 ** =b:pkgsProfile:blee3:realm-site= list of packages and their versions.
 #+end_org "
   )
 (put 'b:pkgsProfile:blee3:realm-site ':profileName "blee3-realm-site")
 
-(defvar b:pkgsProfile:blee3:realm-user ($:b:profile|atBase "realm-user-pkgsProfile.el")
+(defvar b:pkgsProfile:blee3:realm-user "/bisos/blee/profiles/blee3/realm-user-pkgsProfile.el"
    " #+begin_org
 ** =b:pkgsProfile:blee3:realm-user= list of packages and their versions.
 #+end_org "
