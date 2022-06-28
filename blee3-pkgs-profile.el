@@ -105,7 +105,7 @@
 (put 'b:pkgsProfile:blee3:realm-user ':profileName "blee3-realm-user")
 
 
-(defvar b:pkgsProfile:blee3:all
+(defvar b:pkgsProfile:collection:blee3
   `(
     b:pkgsProfile:blee3:doom3
     b:pkgsProfile:blee3:native
@@ -116,11 +116,11 @@
     b:pkgsProfile:blee3:realm-user
     )
    " #+begin_org
-** =b:pkgsProfile:blee3:all= list of packages and their versions.
+** =b:pkgsProfile:collection:blee3= list of packages and their versions.
 #+end_org "
   )
 
-(defvar b:pkgsProfile:blee3:allSansDoom3
+(defvar b:pkgsProfile:collection:blee3-sansDoom3
   `(
     b:pkgsProfile:blee3:native
     b:pkgsProfile:blee3:adopted
@@ -130,7 +130,7 @@
     b:pkgsProfile:blee3:realm-user
     )
    " #+begin_org
-** =b:pkgsProfile:blee3:allSansDoom3= list of packages and their versions.
+** =b:pkgsProfile:collection:blee3-sansDoom3= list of packages and their versions.
 #+end_org "
   )
 
@@ -173,71 +173,6 @@
 
 " orgCmntEnd)
 
-
-;;;#+BEGIN:  b:elisp:defs/defun :defName "b:pkgsProfile:blee3+:straight--lockfile-read-all|advice"
-(orgCmntBegin "
-* [[elisp:(show-all)][(>]]  =defun= <<b:pkgsProfile:blee3+:straight--lockfile-read-all|advice>> [[elisp:(org-shifttab)][<)]] E|
-" orgCmntEnd)
-(defun b:pkgsProfile:blee3+:straight--lockfile-read-all|advice (
-;;;#+END:
-                                                                <origFunc &rest <args)
-   " #+begin_org
-** DocStr: This is a special purpose around advice-add for straight--lockfile-read-all.
-A combined pinned-list of packages is added to the original list.
-The original straight--lockfile-read-all comes first.
-#+end_org "
-   (append (apply <origFunc <args) ; lockfiles still take priority
-           (b:pkgsProfile:blee3|pinnedListAll)))
-
-(orgCmntBegin "
-** Basic Usage:
-#+BEGIN_SRC emacs-lisp
-(b:pkgsProfile:blee3+:straight--lockfile-read-all|advice 'straight--lockfile-read-all)
-#+END_SRC
-" orgCmntEnd)
-
-;;;#+BEGIN:  b:elisp:defs/advice-add :symbol "straight--lockfile-read-all" :where "around" :function "b:pkgsProfile:blee3+:straight--lockfile-read-all|advice"
-(orgCmntBegin "
-* [[elisp:(show-all)][(>]]  =advice-add=  symbol=straight--lockfile-read-all where=around function=[[b:pkgsProfile:blee3+:straight--lockfile-read-all|advice]] [[elisp:(org-shifttab)][<)]] E|
-" orgCmntEnd)
-(advice-add 'straight--lockfile-read-all :around #'b:pkgsProfile:blee3+:straight--lockfile-read-all|advice)
-;;;#+END:
-
-;;; (straight--lockfile-read-all)
-
-;;; (straight-use-package 'emms) (straight-use-package 'pyvenv) (straight-use-package 'avy) (straight-use-package 'tide)
-
-;;;#+BEGIN:  b:elisp:defs/defun :defName "b:pkgsProfile:blee3|pinnedListAll"
-(orgCmntBegin "
-* [[elisp:(show-all)][(>]]  =defun= <<b:pkgsProfile:blee3|pinnedListAll>> [[elisp:(org-shifttab)][<)]] E|
-" orgCmntEnd)
-(defun b:pkgsProfile:blee3|pinnedListAll (
-;;;#+END:
-                                          )
-   " #+begin_org
-** DocStr: Based on contents of /bisos/blee/profile/blee3 read all relevant files and convert to list.
-NOTYET, TO-BE-OPTIMIZED. this does not need to be computed everytime.
-#+end_org "
-   (let* (
-          ($pkgsListIntake)
-          ($result ())
-         )
-     ;;(dolist ($eachFile b:pkgsProfile:blee3:allSansDoom3)
-     (dolist ($profileSymb b:pkgsProfile:blee3:all)
-       (when (not (member ':pkgsList (symbol-plist $profileSymb)))
-         (message (format "Preparation Of :: %s" $profileSymb))
-         (b:pkgsProfile:file:read|prepare $profileSymb))
-       (setq $result (append $result (get $profileSymb ':pkgsList)))
-       )
-     $result))
-
-(orgCmntBegin "
-** Basic Usage:
-#+BEGIN_SRC emacs-lisp
-;; (get 'b:pkgsProfile:blee3:doom3 ':pkgsList)
-(b:pkgsProfile:blee3|pinnedListAll)
-#+END_SRC
-" orgCmntEnd)
 
 ;;;#+BEGIN: b:elisp:file/provide :modName nil
 (provide 'blee3-pkgs-profile)
