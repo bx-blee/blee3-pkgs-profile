@@ -1,0 +1,4 @@
+(blee3-pkgs-profile
+  :fetcher github
+  :repo "bx-blee/blee3-pkgs-profile"
+  :files ("*.el" "profiles/*.el"))
