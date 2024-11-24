@@ -61,6 +61,7 @@ Since this file may have been symlinked to, ~file-truename~ is needed.
 (defvar b:pkgsProfile:blee3:orphan ($:b:profile|atBase "orphan-pkgsProfile.el")
    " #+begin_org
 ** =b:pkgsProfile:blee3:orphan= list of packages and their versions.
+Orphan packages are those that were not packaged.
 #+end_org "
   )
 (put 'b:pkgsProfile:blee3:orphan ':profileName "blee3-orphan")
@@ -68,6 +69,7 @@ Since this file may have been symlinked to, ~file-truename~ is needed.
 (defvar b:pkgsProfile:blee3:doom3 ($:b:profile|atBase "doom3-pkgsProfile.el")
    " #+begin_org
 ** =b:pkgsProfile:blee3:doom3= list of packages and their versions.
+Packages that are included with doom3.
 #+end_org "
   )
 (put 'b:pkgsProfile:blee3:doom3 ':profileName "blee3-doom3")
@@ -76,6 +78,7 @@ Since this file may have been symlinked to, ~file-truename~ is needed.
 (defvar b:pkgsProfile:blee3:native ($:b:profile|atBase "native-pkgsProfile.el")
    " #+begin_org
 ** =b:pkgsProfile:blee3:native= list of packages and their versions as property-list.
+Blee packages that we have developed natively.
 #+end_org "
   )
 (put 'b:pkgsProfile:blee3:native ':profileName "blee3-native")
@@ -83,6 +86,7 @@ Since this file may have been symlinked to, ~file-truename~ is needed.
 (defvar b:pkgsProfile:blee3:adopted ($:b:profile|atBase "adopted-pkgsProfile.el")
    " #+begin_org
 ** =b:pkgsProfile:blee3:adopted= list of packages and their versions.
+Packages that we have adopted and are not part of doom.
 #+end_org "
   )
 (put 'b:pkgsProfile:blee3:adopted ':profileName "blee3-adopted")
@@ -90,6 +94,7 @@ Since this file may have been symlinked to, ~file-truename~ is needed.
 (defvar b:pkgsProfile:blee3:explicit ($:b:profile|atBase "explicit-pkgsProfile.el")
    " #+begin_org
 ** =b:pkgsProfile:blee3:explicit= list of packages and their versions.
+Explicitly mentioned.
 #+end_org "
   )
 (put 'b:pkgsProfile:blee3:explicit ':profileName "blee3-explicit")
@@ -97,6 +102,7 @@ Since this file may have been symlinked to, ~file-truename~ is needed.
 (defvar b:pkgsProfile:blee3:ephemera ($:b:profile|atBase "ephemera-pkgsProfile.el")
    " #+begin_org
 ** =b:pkgsProfile:blee3:ephemera= list of packages and their versions.
+Non permanent packages.
 #+end_org "
   )
 (put 'b:pkgsProfile:blee3:ephemera ':profileName "blee3-ephemera")
