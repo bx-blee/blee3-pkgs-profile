@@ -1,11 +1,23 @@
 
-#+TITLE: pkgs-profile
+#+TITLE: blee3-pkgs-profile
+
+In Blee, =blee3-pkgs-profile= sits on top of =pkgs-profile=.
 
 pkgs-profile is a general purpose package that creates a consistent set of
 pinned packages based on their commitHash.
+See https://github.com/bx-blee/pkgs-profile.
 
 straight pkg installs go through pkgs-profile as a result the set remains
 consistent and stable.
+
+* Table Of Contents     :TOC:
+- [[#doom-packages-profile----for-use-outside-of-doom][Doom Packages Profile -- For Use Outside Of Doom]]
+- [[#extraction-of-packages-from-doom][Extraction Of Packages From Doom]]
+  - [[#clone-all-doom-packages][Clone All Doom Packages]]
+  - [[#bisoscorebsipbindoompkgsprofilesh-walks-through-cloned-packages-and-creates-packages-list][/bisos/core/bsip/bin/doomPkgsProfile.sh Walks Through Cloned Packages And Creates Packages list]]
+- [[#packages-list----kept-at-bisosbleeprofilesdoomdoom-300-alphael][Packages List -- Kept At /bisos/blee/profiles/doom/doom-3.0.0-alpha.el]]
+- [[#bprofilesdoom300-alpha--is-a-list-of-all-packages-and-their-versions][b:profiles:doom:3.0.0-alpha  is a list of all packages and their versions]]
+- [[#bstraightprofileinstall-profile-pkgname][(b:straight:profile|install profile pkgName)]]
 
 * Doom Packages Profile -- For Use Outside Of Doom
 

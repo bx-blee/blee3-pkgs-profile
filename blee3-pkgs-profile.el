@@ -50,6 +50,7 @@
 (defvar b:pkgsProfile:blee3:base (expand-file-name "profiles" (file-name-directory (file-truename load-file-name)))
   " #+begin_org
 ** =b:pkgsProfile:blee3:base= is base directory of profiles files.
+Typically: [[file:/bisos/git/auth/bxRepos/blee/blee3-pkgs-profile/profiles]]
 The default (initial) value is that of the profiles directory next to this file in the repo.
 Since this file may have been symlinked to, ~file-truename~ is needed.
 #+end_org "
